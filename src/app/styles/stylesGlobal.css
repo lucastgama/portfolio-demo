@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/reckoner");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", "Arial", sans-serif;
+  list-style-type: none;
+  user-select: none;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b0b0b;
+}
+
+.mx-width {
+  width: 100%;
+  max-width: 1440px;
+  max-height: 900px;
+  padding: 2rem 4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .mx-width {
+    padding: 1.4rem 2.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mx-width {
+    padding: 1rem;
+  }
+}
+
+/*Carousel*/
+.slick-track {
+  height: 400px !important;
+}
+
+.slick-slide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.slick-prev {
+  left: 25px !important;
+  z-index: 10 !important;
+}
+.slick-next {
+  right: 25px !important;
+  z-index: 10 !important;
+}
+.slick-prev:before {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  font-size: 40px !important;
+  color: #ffffff !important;
+}
+.slick-next:before {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  font-size: 40px !important;
+  color: #ffffff !important;
+}
+.slick-slider {
+  width: 100% !important;
+}
+
+/*Scroll*/
+::-webkit-scrollbar {
+  /*display: none; */
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #444;
+  box-shadow: 0 0 1px 1px #111, inset 0 0 4px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #ffffff;
+  background: linear-gradient(to right, #3e3e3e, #111, #000);
+  box-shadow: inset 0 0 1px 1px #646464;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
