@@ -32,7 +32,7 @@ const NewPost = ({ img, title, content, author, comments }: NewPostProps) => {
           rem praesentium ad est natus aspernatur sit! Ut qui molestiae
           explicabo!
         </S.Content>
-        <S.Details> -->Lucas Gama </S.Details>
+        <S.Details> Lucas Gama </S.Details>
       </S.ContentPart>
       </S.Article>
     </S.Card>
