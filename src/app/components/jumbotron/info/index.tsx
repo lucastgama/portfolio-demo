@@ -18,7 +18,7 @@ const Info = () => {
     <Suspense fallback={<Loader />}>
       <S.Section className="mx-width" id="inicio">
         <S.Statue>
-          {/* <Statue /> */}
+          <Statue />
         </S.Statue>
         <S.ProfilePicture>
           <S.PictureContainer>
