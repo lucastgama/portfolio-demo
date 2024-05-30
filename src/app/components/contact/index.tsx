@@ -35,7 +35,7 @@ const Contact = () => {
 
   const [isSendingEmail, setIsSendingEmail] = useState(false);
 
-  const sendEmail = async (e) => {
+  const sendEmail = async (e:any) => {
     e.preventDefault();
     setIsSendingEmail(true);
     try {
