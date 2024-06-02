@@ -70,8 +70,7 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 20px;
   z-index: 25;
-  @media only screen and (max-width: 1024px) {
-    width: 480px;
+  @media screen and (max-width: 1024px) {
     gap: 15px;
   }
 `;
@@ -101,10 +100,10 @@ export const Input = styled.input`
   border: none;
   border-radius: 10px;
   @media screen and (max-width: 1024px) {
-    font-size: ${v.fontSize.sm};
+    font-size: ${v.fontSize.base};
   }
   @media screen and (max-width: 480px) {
-    font-size: ${v.fontSize.base};
+    font-size: ${v.fontSize.sm};
     padding: 0.8rem;
   }
 `;
@@ -124,7 +123,6 @@ export const TextArea = styled.textarea`
     font-size: ${v.fontSize.xs};
   }
   @media screen and (max-width: 480px) {
-    font-size: ${v.fontSize.md};
     padding: 0.8rem;
   }
 `;
