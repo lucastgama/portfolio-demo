@@ -14,22 +14,22 @@ export const Header = styled.header`
 
 export const Name = styled.h3`
   color: ${v.colors.thirdColor};
-  font-size: ${v.fontSize.sm};
+  font-size: ${v.fontSize.base};
   font-weight: 400;
   @media screen and (max-width: 480px) {
-    font-size: ${v.fontSize.md};
+    font-size: ${v.fontSize.sm};
   }
 `;
 
 export const ProgressPercentage = styled.h3`
   color: ${v.colors.thirdColor};
-  font-size: ${v.fontSize.sm};
+  font-size: ${v.fontSize.base};
   font-weight: 400;
   & span {
     color: ${v.colors.accentColor};
   }
   @media screen and (max-width: 480px) {
-    font-size: ${v.fontSize.md};
+    font-size: ${v.fontSize.sm};
   }
   @media screen and (max-width: 320px) {
     display: none;
