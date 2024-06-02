@@ -36,7 +36,6 @@ const ControlLight: FC = () => {
       attenuation={0}
       penumbra={5}
       ref={light}
-      castShadow
       intensity={1.6}
       distance={10}
       position={[0, 0, 3]}
@@ -46,7 +45,7 @@ const ControlLight: FC = () => {
 
 const Statue: FC = () => {
   return (
-    <Canvas shadows>
+    <Canvas>
       <OrbitControls
         enableRotate={false}
         enableZoom={false}
@@ -58,7 +57,7 @@ const Statue: FC = () => {
       <pointLight position={[0, 1, 1]} intensity={0.05} />
       <ControlLight />
       <StatueObject />
-      <SoftShadows samples={3} />
+      <SoftShadows samples={1} />
     </Canvas>
   );
 };

@@ -100,10 +100,10 @@ export const Input = styled.input`
   border: none;
   border-radius: 10px;
   @media screen and (max-width: 1024px) {
-    font-size: ${v.fontSize.base};
+    font-size: ${v.fontSize.sm};
   }
   @media screen and (max-width: 480px) {
-    font-size: ${v.fontSize.sm};
+    font-size: ${v.fontSize.xs};
     padding: 0.8rem;
   }
 `;
@@ -120,9 +120,10 @@ export const TextArea = styled.textarea`
   font-size: ${v.fontSize.base};
   font-weight: 300;
   @media screen and (max-width: 1024px) {
-    font-size: ${v.fontSize.xs};
+    font-size: ${v.fontSize.sm};
   }
   @media screen and (max-width: 480px) {
+    font-size: ${v.fontSize.xs};
     padding: 0.8rem;
   }
 `;

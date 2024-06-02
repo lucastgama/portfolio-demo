@@ -29,7 +29,7 @@ const Person = () => {
         <fog attach="fog" args={["#0b0b0b", 10, 15]} />
         <Suspense fallback={null}>
           <PersonObject />
-          <ContactShadows resolution={206} frames={Infinity} position={[0, -0.5, 0]} scale={5} blur={0.2} opacity={1} far={20} />
+          <ContactShadows resolution={128} frames={Infinity} position={[0, -0.5, 0]} scale={5} blur={1} opacity={0.5} far={10} />
         </Suspense>
         <Environment resolution={206}>
           <Lightformer
