@@ -40,23 +40,23 @@ const Projects = () => {
   };
 
   return (
-      <S.Section id='projetos' className="mx-width">
-        <S.Container>
-          <S.Title>Projetos</S.Title>
-        </S.Container>
-        <Slider {...settings}>
-          {projects.map((project, index) => (
-            <Link key={index} href={project.link} target="blank">
-              <Card
-                languages={project.languages}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-              />
-            </Link>
-          ))}
-        </Slider>
-      </S.Section>
+    <S.Section id="projetos" className="mx-width">
+      <S.Container>
+        <S.Title>Projetos</S.Title>
+      </S.Container>
+      <Slider {...settings}>
+        {projects.map((project, index) => (
+          <Card
+            key={index}
+            languages={project.languages}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            link={project.link}
+          />
+        ))}
+      </Slider>
+    </S.Section>
   );
 };
 

@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import * as v from "@/app/lib/variable/variables";
 
-export const CardLink = styled.a``;
-
 export const Card = styled.div`
   width: 240px;
   height: 345px;
