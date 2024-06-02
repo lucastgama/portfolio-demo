@@ -1,7 +1,6 @@
-'use client'
+"use client";
 
-import { useRef, useState } from "react";
-import PropTypes from "prop-types";
+import { useRef, useState, FormEvent } from "react";
 import * as S from "./styles";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
@@ -9,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Earth from "../scene/earth";
 
 const Contact = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
   const successSend = () =>
     toast.success("Mensagem enviada!!", {
       position: "bottom-center",
@@ -35,8 +34,9 @@ const Contact = () => {
 
   const [isSendingEmail, setIsSendingEmail] = useState(false);
 
-  const sendEmail = async (e:any) => {
+  const sendEmail = async (e: FormEvent) => {
     e.preventDefault();
+    if (form.current === null) return;
     setIsSendingEmail(true);
     try {
       await emailjs.sendForm(
@@ -57,7 +57,7 @@ const Contact = () => {
   return (
     <S.Section id="contato" className="mx-width">
       <S.Title>Contato</S.Title>
-      <S.Container >
+      <S.Container>
         <S.Map>
           <Earth />
         </S.Map>
@@ -93,16 +93,16 @@ const Contact = () => {
             required
           />
           <S.btnContainer>
-            {isSendingEmail ? "" : <S.Button type="submit">Enviar</S.Button>}
+            {isSendingEmail ? (
+              <S.Button disabled>Enviando...</S.Button>
+            ) : (
+              <S.Button type="submit">Enviar</S.Button>
+            )}
           </S.btnContainer>
         </S.Form>
       </S.Container>
     </S.Section>
   );
-};
-
-Contact.propTypes = {
-  id: PropTypes.string,
 };
 
 export default Contact;

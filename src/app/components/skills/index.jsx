@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
 import { useContext, useEffect, useState } from "react";
 import * as S from "./styles";
 import ProgressBar from "../progressBar";
 import Upgrade from "../upgrade";
-import Downgrade from "../downgrade/index";
+import Downgrade from "../downgrade";
 import * as v from "@/app/lib/variable/variables";
 import Person from "../scene/person";
 import { SkillContext } from "@/app/context/skillContext";
@@ -27,7 +27,7 @@ const Skills = () => {
   return (
     <S.Section id="habilidades" className="mx-width">
       <S.Title>Habilidades</S.Title>
-      <S.Container >
+      <S.Container>
         <S.SkillTree>
           <S.Skills>
             {skills.map((skill, index) => (

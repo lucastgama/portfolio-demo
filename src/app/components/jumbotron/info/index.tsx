@@ -1,21 +1,10 @@
 "use client";
-import { useProgress } from "@react-three/drei";
 import Statue from "../../scene/statue";
 import * as S from "./styles";
 import Image from "next/image";
-import { Suspense } from "react";
 
 const Info = () => {
-  function Loader() {
-    const { progress } = useProgress();
-    return (
-      <div className="loading-screen">
-        <p>{progress.toFixed(0)}%</p>
-      </div>
-    );
-  }
   return (
-    <Suspense fallback={<Loader />}>
       <S.Section className="mx-width" id="inicio">
         <S.Statue>
           <Statue />
@@ -44,7 +33,6 @@ const Info = () => {
           aplicação é apresentada ao mundo.
         </S.ProfileDetails>
       </S.Section>
-    </Suspense>
   );
 };
 
