@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <>
       <SkillProvider>
-        <Info />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+          <Info />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
       </SkillProvider>
     </>
   );
