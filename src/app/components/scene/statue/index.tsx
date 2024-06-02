@@ -39,7 +39,6 @@ const ControlLight: FC = () => {
       castShadow
       intensity={1.6}
       distance={10}
-      shadowBias={-0.01}
       position={[0, 0, 3]}
     />
   );
