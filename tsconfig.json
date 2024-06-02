@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/meshes/earth.jsx", "src/app/components/meshes/nile.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/meshes/earth.jsx", "src/app/components/meshes/nile.jsx", "src/app/components/meshes/person.jsx", "src/app/components/meshes/statue.jsx"],
   "exclude": ["node_modules"]
 }

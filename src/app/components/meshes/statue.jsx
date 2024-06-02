@@ -2,13 +2,9 @@ import { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
-interface StatueProps {
-  props?: any;
-}
-
-export function StatueObject({ props }: StatueProps) {
+export function StatueObject(props) {
   const { nodes, materials } = useGLTF("./meshes/grace.glb");
-  const meshRef = useRef<THREE.Group>(null);
+  const meshRef = useRef(null);
 
   return (
     <group
