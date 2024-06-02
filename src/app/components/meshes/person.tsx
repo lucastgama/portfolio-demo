@@ -15,55 +15,54 @@ export function PersonObject({ props }: PersonObjectProps) {
   const router = useRouter();
 
   useEffect(() => {
+    if (!actions) return;
+
     switch (downgradeValue) {
       case 0:
-        actions.idle.play();
-        actions.no.stop();
-        actions.look.stop();
-        actions.coffee.stop();
-        actions.run.stop();
+        actions.idle?.play();
+        actions.no?.stop();
+        actions.look?.stop();
+        actions.coffee?.stop();
+        actions.run?.stop();
         break;
       case 1:
-        actions.idle.stop();
-        actions.no.play();
-        actions.look.stop();
-        actions.coffee.stop();
-        actions.run.stop();
+        actions.idle?.stop();
+        actions.no?.play();
+        actions.look?.stop();
+        actions.coffee?.stop();
+        actions.run?.stop();
         break;
       case 2:
-        actions.idle.stop();
-        actions.no.stop();
-        actions.coffee.play();
-        actions.look.stop();
-        actions.run.stop();
+        actions.idle?.stop();
+        actions.no?.stop();
+        actions.coffee?.play();
+        actions.look?.stop();
+        actions.run?.stop();
         break;
       case 3:
-        actions.idle.stop();
-        actions.no.stop();
-        actions.coffee.stop();
-        actions.look.play();
-        actions.run.stop();
+        actions.idle?.stop();
+        actions.no?.stop();
+        actions.coffee?.stop();
+        actions.look?.play();
+        actions.run?.stop();
         break;
       case 4:
         router.push("/404");
         break;
       default:
-        actions.idle.stop();
-        actions.no.stop();
-        actions.coffee.stop();
-        actions.look.stop();
-        actions.run.play();
+        actions.idle?.stop();
+        actions.no?.stop();
+        actions.coffee?.stop();
+        actions.look?.stop();
+        actions.run?.play();
         break;
     }
   }, [
     downgradeValue,
-    actions.idle,
-    actions.no,
-    actions.look,
-    actions.coffee,
-    actions.run,
+    actions,
     router
   ]);
+
   return (
     <group
       ref={group}
@@ -215,8 +214,27 @@ export function PersonObject({ props }: PersonObjectProps) {
             rotation={[-Math.PI, 0, 0]}
             scale={0.154}
           />
-          <group name="cs_thigh_fk" position={[0.5, 7.5, 0]} scale={0.822} />
-          <group name="cs_toe" position={[0.5, 9.5, 0]} scale={0.429} />
+          <group
+            name="cs_square_3"
+            position={[0.5, 1.497, 0]}
+            rotation={[-Math.PI, 0, 0]}
+            scale={0.154}
+          />
+          <group name="cs_spine_01" position={[0.5, 3.5, 0]} scale={0.206} />
+          <group name="cs_spine_02" position={[0.5, 5.5, 0]} scale={0.206} />
+          <group name="cs_spine_03" position={[0.5, 7.5, 0]} scale={0.206} />
+          <group name="cs_spine_04" position={[0.5, 9.5, 0]} scale={0.206} />
+          <group name="cs_spine_05" position={[0.5, 11.5, 0]} scale={0.206} />
+          <group
+            name="cs_spine_mid"
+            position={[0.5, 13.5, 0]}
+            scale={0.164}
+          />
+          <group name="cs_sternum" position={[1.5, 3.5, 0]} scale={0.822} />
+          <group name="cs_thigh_fk" position={[0.5, 9.5, 0]} scale={0.822} />
+          <group name="cs_thumb" position={[1.5, 11.5, 0]} scale={0.082} />
+          <group name="cs_upperarm_fk" position={[0.5, 5.5, 0]} scale={0.822} />
+          <group name="cs_wrist" position={[0.5, 3.5, 0]} scale={0.206} />
         </group>
       </group>
     </group>
