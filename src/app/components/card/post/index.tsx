@@ -2,9 +2,9 @@ import React from "react";
 import * as S from "./styles";
 import Image from "next/image";
 
-const MediaPlayer = () => {
+const PostCard = () => {
   return (
-    <S.MediaPlayer>
+    <S.PostCard>
       <S.Article>
         <S.Thumbnail>
           <Image
@@ -19,10 +19,11 @@ const MediaPlayer = () => {
           <S.Category>Media Player</S.Category>
           <S.Title>lorem ipsum lorem lorem ipsum lorem</S.Title>
           <S.Date>Abril 18, 2023</S.Date>
+          <S.ReadMore>Saiba mais</S.ReadMore>
         </S.ContentPart>
       </S.Article>
-    </S.MediaPlayer>
+    </S.PostCard>
   );
 };
 
-export default MediaPlayer;
+export default PostCard;

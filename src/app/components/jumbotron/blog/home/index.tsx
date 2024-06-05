@@ -3,8 +3,8 @@ import * as S from './styles'
 
 const JumbotronBlog = () => {
   return (
-    <S.SectionBlog>
-      <S.Section className="mx-width">
+    <S.SectionBlog className="mx-width">
+      <S.Section >
         <S.Statue>
         </S.Statue>
       </S.Section>

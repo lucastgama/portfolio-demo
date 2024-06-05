@@ -11,25 +11,17 @@ export const SectionPost = styled.section`
 `;
 
 export const Section = styled.div`
-  position: relative;
+  width: 100%;
   display: flex;
-  height: 100vh;
-  gap: 1.6rem;
-  @media screen and (max-width: 1024px) {
-    flex-direction: column;
-    gap: 1rem;
-  }
-`;
-
-export const NewPost = styled.div`
-  flex: 2;
-  display: flex;
-  gap: 0.8rem;
-`;
-
-export const OlderPosts = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  flex-wrap:wrap ;
+  align-items: center;
   justify-content: space-between;
+  padding: 2rem 0;
+  gap: 1rem;
+`;
+
+export const LineSection = styled.div`
+  width: 100%;
+  height:1px;
+  background-color:${v.colors.secondColor};
 `;

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import * as v from "@/app/lib/variable/variables";
 
-export const MediaPlayer = styled.div`
+export const PostCard = styled.div`
   width: 260px;
-  height: 320px;
-  cursor: pointer;
+  max-height: 380px;
+  border-radius: 10px;
   transition: all 0.3s ease-out;
   &:hover {
     transform: scale(1.05);
@@ -41,7 +41,7 @@ export const Category = styled.div`
     width: 1.2rem;
     transform: scaleX(1);
     height: 3px;
-    bottom: 1px;
+    bottom: -2px;
     left: 0;
     background-color: ${v.colors.accentColor};
     transform-origin: bottom right;
@@ -68,4 +68,16 @@ export const Date = styled.div`
   color: ${v.colors.thirdColor};
   font-size: ${v.fontSize.xs};
   padding: 0.6rem 0 0 0;
+`;
+
+export const ReadMore = styled.a`
+  color: ${v.colors.thirdColor};
+  font-size: ${v.fontSize.sm};
+  padding: 0.6rem 0;
+  display: block;
+  cursor: pointer;
+  &:hover {
+    color: ${v.colors.accentColor};
+    font-weight: 600;
+  }
 `;

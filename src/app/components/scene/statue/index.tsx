@@ -3,62 +3,64 @@
 import {
   OrbitControls,
   PerspectiveCamera,
+  Plane,
   SoftShadows,
+  Sphere,
   SpotLight,
 } from "@react-three/drei";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { useRef, useState } from "react";
 import { StatueObject } from "../../meshes/statue";
-import { useRef, FC } from "react";
-import { Vector3, SpotLight as ThreeSpotLight } from "three";
 
-const ControlLight: FC = () => {
-  const light = useRef<ThreeSpotLight>(null);
-  const vec = new Vector3();
-  const { viewport } = useThree();
-
+const MouseTracker = ({ setMousePosition }) => {
   useFrame((state) => {
-    if (light.current) {
-      light.current.target.position.lerp(
-        vec.set(
-          (state.pointer.x * viewport.width) / 2,
-          (state.pointer.y * viewport.height) / 2,
-          0
-        ),
-        0.1
-      );
-      light.current.target.updateMatrixWorld();
-    }
+    const x = state.pointer.x;
+    const y = state.pointer.y;
+    setMousePosition({ x, y });
   });
-
-  return (
-    <SpotLight
-      angle={0.45}
-      attenuation={0}
-      penumbra={5}
-      ref={light}
-      intensity={1.6}
-      distance={10}
-      position={[0, 0, 3]}
-    />
-  );
+  return null;
 };
 
-const Statue: FC = () => {
+const Statue = () => {
+  const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({
+    x: 0,
+    y: 0,
+  });
+  const sphereRef = useRef();
+
   return (
-    <Canvas>
-      <OrbitControls
-        enableRotate={false}
-        enableZoom={false}
-        minDistance={1}
-        maxDistance={5}
-      />
-      <PerspectiveCamera makeDefault position={[0, 0, 10]} fov={50} />
-      <pointLight position={[1, -1, -2]} intensity={1} />
-      <pointLight position={[0, 1, 1]} intensity={0.05} />
-      <ControlLight />
-      <StatueObject />
-      <SoftShadows samples={1} />
-    </Canvas>
+    <>
+      <Canvas shadows>
+        <OrbitControls
+          enableRotate={true}
+          enableZoom={true}
+          minDistance={1}
+          maxDistance={5}
+        />
+        <PerspectiveCamera makeDefault position={[0, 0, 10]} fov={50} />
+        <pointLight position={[1, -1, -2]} intensity={1} />
+        <pointLight position={[0, 1, 1]} intensity={0.05} />
+        <SpotLight
+          angle={0.9}
+          attenuation={0}
+          intensity={10}
+          distance={30}
+          position={[mousePosition.x, mousePosition.y, 3]}
+          target={sphereRef.current}
+        />
+        <StatueObject />
+        <Plane receiveShadow args={[20, 20]} position={[0, 0, -1]}>
+          <meshStandardMaterial color="hotpink" />
+        </Plane>
+        <Sphere ref={sphereRef} args={[0.5]} position={[mousePosition.x * 4.5, mousePosition.y * 4.5, 0]} />
+        <SoftShadows samples={2} />
+        <MouseTracker setMousePosition={setMousePosition} />
+      </Canvas>
+      <div style={{ position: "absolute", top: 10, left: 10, color: "white" }}>
+        Mouse Position: X: {mousePosition.x.toFixed(2)}, Y:{" "}
+        {mousePosition.y.toFixed(2)}
+      </div>
+    </>
   );
 };
 

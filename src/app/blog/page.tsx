@@ -1,14 +1,12 @@
 "use client";
 import JumbotronBlog from "../components/jumbotron/blog/home";
-import { PostsSection } from "../components/post";
-import PostsMediaSection from "../components/postMedia";
+import PostsSection from "../components/post";
 
 const Blog = () => {
   return (
     <>
       <JumbotronBlog />
       <PostsSection />
-      <PostsMediaSection />
     </>
   );
 };

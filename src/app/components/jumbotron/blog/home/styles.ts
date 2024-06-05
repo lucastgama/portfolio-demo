@@ -7,7 +7,7 @@ export const SectionBlog = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 85vh;
+  height: 80vh;
   background-color: ${v.colors.primaryColor};
 `;
 
@@ -26,5 +26,4 @@ export const Statue = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  /* z-index: 1; */
 `;

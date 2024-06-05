@@ -1,4 +1,5 @@
 "use client";
+
 import Statue from "../../scene/statue";
 import * as S from "./styles";
 import Image from "next/image";
