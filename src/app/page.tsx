@@ -25,9 +25,9 @@ export default function Home() {
         <SkillProvider>
           <Info />
           <About />
-          <Skills />
+          {/* <Skills />
           <Projects />
-          <Contact />
+          <Contact /> */}
         </SkillProvider>
       )}
     </>

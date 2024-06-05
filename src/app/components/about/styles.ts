@@ -94,12 +94,8 @@ export const Logos = styled.div`
   align-items: center;
   justify-content: flex-start;
   padding: 0.5em 0;
-  transition: ease-in 0.5s;
   @media screen and (max-width: 1024px) {
     justify-content: center;
-  }
-  :hover{
-    transform: scale(1.2);
   }
 `;
 
