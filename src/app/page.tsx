@@ -17,19 +17,20 @@ export default function Home() {
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
+  
   return (
     <>
-      {isLoading ? (
+      {/* {isLoading ? (
         <Loading />
       ) : (
-        <SkillProvider>
+        <SkillProvider> */}
           <Info />
-          <About />
+          {/* <About />
           <Skills />
           <Projects />
-          <Contact />
-        </SkillProvider>
-      )}
+          <Contact /> */}
+        {/* </SkillProvider>
+      )} */}
     </>
   );
 }
