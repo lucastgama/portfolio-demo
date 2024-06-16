@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import * as v from '@/app/lib/variable/variables'
+import * as v from "@/app/lib/variable/variables";
 
 export const SectionBlog = styled.section`
   width: 100%;
@@ -18,6 +18,7 @@ export const Section = styled.div`
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 `;
 
 export const Statue = styled.div`

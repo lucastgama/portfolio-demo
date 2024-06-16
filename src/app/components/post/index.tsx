@@ -18,12 +18,24 @@ const PostsSection = () => {
   return (
     <S.SectionPost className="mx-width">
       <S.Section>
-        <S.LineSection />
         {teste.map((post) => (
           <PostCard key={post.id} />
         ))}
-        <S.LineSection />
       </S.Section>
+      <S.PaginationContainer>
+        <S.LineDecoration />
+        <S.Pagination>
+          <S.PaginationSpan>«</S.PaginationSpan>
+          <S.PaginationList>1</S.PaginationList>
+          <S.PaginationList>1</S.PaginationList>
+          <S.PaginationList>1</S.PaginationList>
+          <S.PaginationList>1</S.PaginationList>
+          <S.PaginationList>1</S.PaginationList>
+          <S.PaginationList>1</S.PaginationList>
+          <S.PaginationSpan>»</S.PaginationSpan>
+        </S.Pagination>
+        <S.LineDecoration />
+      </S.PaginationContainer>
     </S.SectionPost>
   );
 };

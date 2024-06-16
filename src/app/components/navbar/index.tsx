@@ -1,9 +1,6 @@
 "use client";
 
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import BtnContact from "../buttons/buttonContact";
-import BtnIcon from "../buttons/buttonIcon";
 import * as S from "./styles";
 import { useState } from "react";
 import Link from "next/link";
@@ -49,11 +46,7 @@ const Navbar = () => {
           </S.NavbarLink>
         </S.NavbarLinks>
         <S.NavbarBtn>
-          <BtnIcon
-            link="https://www.instagram.com/lucas.t.gama/"
-            icon={faInstagram}
-          />
-          <BtnContact text="Contato" icon={faArrowRight} />
+          <BtnContact text="Contato" />
         </S.NavbarBtn>
         <S.BtnMobile onClick={handleMobileNavbar}>
           <S.Burger $isOpen={isMobileNavbarOpen} />
@@ -74,11 +67,7 @@ const Navbar = () => {
               </S.NavbarLink>
             ))}
             <S.NavMobileBtn>
-              <BtnIcon
-                link="https://www.instagram.com/lucas.t.gama/"
-                icon={faInstagram}
-              />
-              <BtnContact text="Contato" icon={faArrowRight} />
+              <BtnContact text="Contato" />
             </S.NavMobileBtn>
           </S.NavMobileLinks>
         </S.NavMobile>

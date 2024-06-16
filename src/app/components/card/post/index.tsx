@@ -19,7 +19,9 @@ const PostCard = () => {
           <S.Category>Media Player</S.Category>
           <S.Title>lorem ipsum lorem lorem ipsum lorem</S.Title>
           <S.Date>Abril 18, 2023</S.Date>
-          <S.ReadMore>Saiba mais</S.ReadMore>
+          <S.ReadMoreContainer>
+            <S.ReadMore>Saiba mais</S.ReadMore>
+          </S.ReadMoreContainer>
         </S.ContentPart>
       </S.Article>
     </S.PostCard>

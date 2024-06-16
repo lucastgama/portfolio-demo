@@ -21,7 +21,7 @@ const BtnDegrade = ({ text }: BtnDegradeProps) => {
   };
   return (
     <S.BtnBorder onClick={handleDownload}>
-      <S.BtnDegrade>{text}</S.BtnDegrade>
+      <S.BtnText>{text}</S.BtnText>
     </S.BtnBorder>
   );
 };

@@ -1,12 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as S from "./styles";
 
 interface BtnContactProps {
   text: string;
-  icon: any;
 }
 
-const BtnContact = ({ text, icon }: BtnContactProps) => {
+const BtnContact = ({ text}: BtnContactProps) => {
   const scrollToSection = (id:any) => {
     const section = document.getElementById(id);
     if (section) {
@@ -26,9 +24,6 @@ const BtnContact = ({ text, icon }: BtnContactProps) => {
           {text}
         </a>
       </S.BtnText>
-      <S.Icon>
-        <FontAwesomeIcon icon={icon} />
-      </S.Icon>
     </S.BtnContact>
   );
 };

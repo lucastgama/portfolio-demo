@@ -11,35 +11,34 @@ const renderLogos = () => {
 };
 
 const About = () => (
-    <S.Section className="mx-width" id="sobremim">
-      <S.Title>Sobre</S.Title>
-      <S.Container>
-        <S.ContainerPicture>
-          <S.Picture src="/image/perfil.jpg" alt="Lucas Gama" />
-        </S.ContainerPicture>
-        <S.ContainerInformation>
-          <S.WhoIam>Sou Comunicativo e Criativo</S.WhoIam>
-          <S.Description>
-            Olá! Sou um desenvolvedor full stack apaixonado por transformar
-            ideias em experiências digitais envolventes. Especializado em
-            JavaScript, busco constantemente aprimorar minhas habilidades para
-            oferecer soluções eficientes e inovadoras.
-          </S.Description>
-          <S.Description>
-            Comprometido com código sólido e limpo, acredito na importância de
-            uma abordagem colaborativa. Trabalho bem em equipe, valorizando a
-            troca de conhecimento e a sinergia coletiva.
-          </S.Description>
-          <S.Description>
-            Se você procura um profissional dedicado, focado em resultados e
-            pronto para enfrentar desafios, estou animado para contribuir para o
-            sucesso do seu próximo projeto. Vamos criar algo incrível juntos!
-          </S.Description>
-          <S.Logos>{renderLogos()}</S.Logos>
-          <BtnDegrade text={"Download CV"} />
-        </S.ContainerInformation>
-      </S.Container>
-    </S.Section>
+  <S.Section className="mx-width" id="sobremim">
+    <S.Title>Sobre</S.Title>
+    <S.Container>
+      <S.ContainerPicture>
+        <S.Picture src="/image/perfil.jpg" alt="Lucas Gama" />
+      </S.ContainerPicture>
+      <S.ContainerInformation>
+        <S.WhoIam>Sou Comunicativo e Criativo</S.WhoIam>
+        <S.Description>
+          Desenvolvedor full stack com mais de 5 anos de experiência em projetos
+          práticos, utilizando as linguagens JavaScript e PHP. Com isso, me
+          tornei um grande admirador de JS e seus frameworks, nos quais tenho
+          especialização. Em PHP, trabalhei com WordPress e WooCommerce para o
+          desenvolvimento de plugins e temas.
+        </S.Description>
+        <S.Description>
+          Mantenho um blog como forma de aprendizado e para ajudar quem está
+          passando por situações semelhantes. Acredito que ensinar é a melhor
+          forma de aprender. Nele, compartilho minhas experiências diversas e as
+          dificuldades que encontro, buscando auxiliar outros desenvolvedores e
+          aprimorar meus conhecimentos. Se interessar, fique à vontade para
+          acessar e saber mais sobre meus conhecimentos práticos.
+        </S.Description>
+        <S.Logos>{renderLogos()}</S.Logos>
+        <BtnDegrade text={"Download CV"} />
+      </S.ContainerInformation>
+    </S.Container>
+  </S.Section>
 );
 
 export default About;

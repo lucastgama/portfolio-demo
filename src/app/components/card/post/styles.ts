@@ -70,14 +70,30 @@ export const Date = styled.div`
   padding: 0.6rem 0 0 0;
 `;
 
+export const ReadMoreContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const ReadMore = styled.a`
+  text-align: center;
+  margin: 10px;
   color: ${v.colors.thirdColor};
+  border: 1px solid ${v.colors.accentColor};
   font-size: ${v.fontSize.sm};
-  padding: 0.6rem 0;
+  width: 100%;
+  border-radius: 50px;
+  font-weight: 300;
+  padding: 0.4rem 1rem;
   display: block;
+  transition: all ease 0.3s;
   cursor: pointer;
   &:hover {
-    color: ${v.colors.accentColor};
-    font-weight: 600;
+    color: ${v.colors.secondColor};
+    border: 1px solid ${v.colors.primaryColor};
+    background-color: ${v.colors.accentColor};
+    font-weight: 500;
   }
 `;
