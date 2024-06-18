@@ -37,6 +37,29 @@ export const ProfileContainer = styled.div`
   height: 100%;
 `;
 
+export const BorderContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 15px solid ${v.colors.primaryColor};
+  z-index: 2;
+`;
+
+export const SocialMedia = styled.nav`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px;
+  right: 0px;
+  width: 210px;
+  height: 42px;
+  background-color: ${v.colors.primaryColor};
+  color: ${v.colors.accentColor};
+  border-radius: 20px 0 0 0;
+  z-index: 2;
+`;
+
 export const ProfilePicture = styled.div`
   display: flex;
   justify-content: center;
@@ -75,25 +98,9 @@ export const PictureContainer = styled.div`
 export const ProfileName = styled.div`
   position: relative;
   font-size: ${v.fontSize.xl};
-  color: ${v.colors.accentColor};
-  font-weight: 600;
+  color: ${v.colors.thirdColor};
+  font-weight: 500;
   z-index: 2;
-  background: -webkit-radial-gradient(
-    circle,
-    ${v.colors.accentColor} 0%,
-    ${v.colors.thirdColor} 90%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  &::after {
-    position: absolute;
-    top: 0;
-    left: 2px;
-    content: "";
-    width: 30%;
-    height: 2px;
-    background-color: ${v.colors.thirdColor};
-  }
   @media screen and (max-width: 1024px) {
     font-size: ${v.fontSize.lg};
   }
@@ -104,17 +111,9 @@ export const ProfileName = styled.div`
 
 export const ProfileDescription = styled.h3`
   font-size: ${v.fontSize.sm};
-  color: ${v.colors.accentColor};
+  color: ${v.colors.thirdColor};
   font-weight: 400;
   z-index: 2;
-  background: -webkit-radial-gradient(
-    circle,
-    ${v.colors.accentColor} 0%,
-    ${v.colors.thirdColor} 90%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
   @media screen and (max-width: 1024px) {
     font-size: ${v.fontSize.xs};
   }

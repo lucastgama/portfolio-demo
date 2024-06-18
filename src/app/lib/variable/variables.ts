@@ -17,69 +17,6 @@ export const fontSize = {
   xxs: "0.5rem",
 };
 
-export const logos = [
-  {
-    alt: "HTML",
-    icon: "/icons/html.png",
-  },
-  {
-    alt: "CSS",
-    icon: "/icons/css.png",
-  },
-  {
-    alt: "JavaScript",
-    icon: "/icons/js.png",
-  },
-  {
-    alt: "Node.js",
-    icon: "/icons/node.png",
-  },
-  {
-    alt: "React",
-    icon: "/icons/react.png",
-  },
-  {
-    alt: "Next",
-    icon: "/icons/nextjs.png",
-  },
-  {
-    alt: "Angular",
-    icon: "/icons/angular.png",
-  },
-  {
-    alt: "Vue",
-    icon: "/icons/vue.png",
-  },
-  {
-    alt: "PHP",
-    icon: "/icons/php.png",
-  },
-  {
-    alt: "Laravel",
-    icon: "/icons/laravel.png",
-  },
-  {
-    alt: "MySql",
-    icon: "/icons/mysql.png",
-  },
-  {
-    alt: "Wordpress",
-    icon: "/icons/wp.png",
-  },
-  {
-    alt: "Bootstrap",
-    icon: "/icons/bootstrap.png",
-  },
-  {
-    alt: "Styled Components",
-    icon: "/icons/styled-components.png",
-  },
-  {
-    alt: "Three",
-    icon: "/icons/three.png",
-  },
-];
-
 export const skills = [
   { title: "HTML + CSS", value: 95, description: "" },
   { title: "JavaScript", value: 80, description: "" },

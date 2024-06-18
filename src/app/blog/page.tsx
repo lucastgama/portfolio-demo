@@ -6,7 +6,7 @@ const Blog = () => {
   return (
     <>
       <JumbotronBlog />
-      {/* <PostsSection /> */}
+      <PostsSection />
     </>
   );
 };

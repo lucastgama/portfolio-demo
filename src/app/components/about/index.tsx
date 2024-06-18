@@ -1,14 +1,7 @@
 "use client";
 
 import * as S from "./styles";
-import { logos } from "@/app/lib/variable/variables";
 import BtnDegrade from "../buttons/buttonDegrade";
-
-const renderLogos = () => {
-  return logos.map((logo, index) => (
-    <S.Logo key={index} src={logo.icon} alt={logo.alt} title={logo.alt} />
-  ));
-};
 
 const About = () => (
   <S.Section className="mx-width" id="sobremim">
@@ -18,7 +11,6 @@ const About = () => (
         <S.Picture src="/image/perfil.jpg" alt="Lucas Gama" />
       </S.ContainerPicture>
       <S.ContainerInformation>
-        <S.WhoIam>Sou Comunicativo e Criativo</S.WhoIam>
         <S.Description>
           Desenvolvedor full stack com mais de 5 anos de experiência em projetos
           práticos, utilizando as linguagens JavaScript e PHP. Com isso, me
@@ -34,7 +26,6 @@ const About = () => (
           aprimorar meus conhecimentos. Se interessar, fique à vontade para
           acessar e saber mais sobre meus conhecimentos práticos.
         </S.Description>
-        <S.Logos>{renderLogos()}</S.Logos>
         <BtnDegrade text={"Download CV"} />
       </S.ContainerInformation>
     </S.Container>

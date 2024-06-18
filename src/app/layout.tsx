@@ -18,7 +18,6 @@ export default function RootLayout({
     <html>
       <body>
         <StyledComponentsRegistry>
-          <Navbar />
           <div className="container">{children}</div>
           <Footer />
         </StyledComponentsRegistry>

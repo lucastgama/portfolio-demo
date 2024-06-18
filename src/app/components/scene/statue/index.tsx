@@ -17,8 +17,8 @@ const MouseTracker = ({ setMousePosition }) => {
   const { viewport } = useThree();
 
   useFrame((state) => {
-    const x = (state.pointer.x * viewport.width) / 4.2;
-    const y = (state.pointer.y * viewport.height) / 4.2;
+    const x = (state.pointer.x * viewport.width) / 4.25;
+    const y = (state.pointer.y * viewport.height) / 4.25;
 
     setMousePosition({ x, y });
   });
@@ -44,6 +44,7 @@ const Statue = () => {
       <PerspectiveCamera makeDefault position={[0, 0, 10]} />
       <pointLight position={[0, -1, 1.5]} intensity={0.01} />
       <pointLight position={[0, 1, 1.2]} intensity={0.02} />
+      <ambientLight intensity={0.01} />
       <SpotLight
         angle={0.4}
         attenuation={0}
@@ -56,16 +57,16 @@ const Statue = () => {
       <StatueObject />
       <CircleGlitch />
       <Plane receiveShadow args={[15, 15]} position={[0, 0, -0.2]}>
-        <meshStandardMaterial color="#9d9d9d" />
+        <meshStandardMaterial color="#5d5d5d" />
       </Plane>
-      <Sphere
+      <Plane
         ref={sphereRef}
         args={[0.001]}
         position={[mousePosition.x, mousePosition.y, 0]}
       >
         <meshBasicMaterial transparent opacity={0.0} />
-      </Sphere>
-      <SoftShadows samples={3} />
+      </Plane>
+      <SoftShadows samples={1} />
       <MouseTracker setMousePosition={setMousePosition} />
     </Canvas>
   );
