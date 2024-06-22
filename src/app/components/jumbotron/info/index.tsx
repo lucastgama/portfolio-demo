@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Statue from "../../scene/statue";
+import Statue from "../../scene/statue/index";
 import * as S from "./styles";
 import { icons } from "@/app/lib/variable/variables";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
