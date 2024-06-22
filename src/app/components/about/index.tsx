@@ -2,13 +2,16 @@
 
 import * as S from "./styles";
 import BtnDegrade from "../buttons/buttonDegrade";
+import ImageScene from "@/app/components/scene/profile/imageScene";
 
 const About = () => (
   <S.Section className="mx-width" id="sobremim">
     <S.Title>Sobre</S.Title>
     <S.Container>
       <S.ContainerPicture>
-        <S.Picture src="/image/perfil.jpg" alt="Lucas Gama" />
+        <S.Picture>
+          <ImageScene />
+        </S.Picture>
       </S.ContainerPicture>
       <S.ContainerInformation>
         <S.Description>

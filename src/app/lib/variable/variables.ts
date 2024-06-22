@@ -1,15 +1,22 @@
+import {
+  faGithub,
+  faInstagram,
+  faLinkedinIn,
+  faBloggerB
+} from "@fortawesome/free-brands-svg-icons";
+
 export const colors = {
   primaryColor: "#050505",
   secondColor: "#1a1a1a",
   thirdColor: "#5b5b5b",
   accentColor: "#fdfdfdfd",
-  categoryColor:'#c2d8e9'
+  categoryColor: "#c2d8e9",
 };
 
 export const fontSize = {
   xxl: "3rem",
   xl: "2.5rem",
-  lg: "2rem", 
+  lg: "2rem",
   md: "1.6rem",
   base: "1.2rem",
   sm: "1rem",
@@ -197,3 +204,25 @@ export const projectGit = [
   },
 ];
 
+export const icons = [
+  {
+    name: "Instagram",
+    icon: faInstagram,
+    link: "https://www.instagram.com/lucas.t.gama/",
+  },
+  {
+    name: "Linkedin",
+    icon: faLinkedinIn,
+    link: "https://www.linkedin.com/in/lucas-tgama/",
+  },
+  {
+    name: "Github",
+    icon: faGithub,
+    link: "https://github.com/lucastgama",
+  },
+  {
+    name: "Blog",
+    icon: faBloggerB,
+    link: "https://github.com/lucastgama",
+  },
+];

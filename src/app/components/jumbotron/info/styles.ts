@@ -10,6 +10,7 @@ export const Section = styled.div`
   text-align: center;
   height: 100vh;
   gap: 22px;
+  background-color: #000;
   @media screen and (max-width: 1024px) {
     gap: 16px;
   }
@@ -25,6 +26,8 @@ export const Statue = styled.div`
   left: 0;
   right: 0;
   z-index: 1;
+  margin: 0.8rem 0.8rem 0 0.8rem;
+  border: 1px solid ${v.colors.secondColor};
 `;
 
 export const ProfileContainer = styled.div`
@@ -37,27 +40,31 @@ export const ProfileContainer = styled.div`
   height: 100%;
 `;
 
-export const BorderContainer = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 15px solid ${v.colors.primaryColor};
-  z-index: 2;
-`;
-
 export const SocialMedia = styled.nav`
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;
-  bottom: 0px;
-  right: 0px;
+  padding: 0 1.2rem;
+  top: 0.8rem;
+  right: 0.8rem;
   width: 210px;
   height: 42px;
-  background-color: ${v.colors.primaryColor};
-  color: ${v.colors.accentColor};
-  border-radius: 20px 0 0 0;
+  background-color: #000;
+  border-radius: 0 0 0 20px;
+  border: 1px solid ${v.colors.secondColor};
+  border-top: none;
+  border-right: none;
   z-index: 2;
+`;
+
+export const SocialIcon = styled.a`
+  padding: 0 0.6rem;
+  color: ${v.colors.accentColor};
+  font-size: ${v.fontSize.base};
+  transition: ease 0.2s all;
+  &:hover {
+    font-size: ${v.fontSize.md};
+  }
 `;
 
 export const ProfilePicture = styled.div`

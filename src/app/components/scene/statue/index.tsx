@@ -5,7 +5,6 @@ import {
   PerspectiveCamera,
   Plane,
   SoftShadows,
-  Sphere,
   SpotLight,
 } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
@@ -13,15 +12,20 @@ import { useRef, useState } from "react";
 import CircleGlitch from "../../meshes/circleGlitch";
 import { StatueObject } from "../../meshes/statue";
 
-const MouseTracker = ({ setMousePosition }) => {
+const MouseTracker = ({ targetRef, setMousePosition }) => {
   const { viewport } = useThree();
 
   useFrame((state) => {
-    const x = (state.pointer.x * viewport.width) / 4.25;
-    const y = (state.pointer.y * viewport.height) / 4.25;
+    const x = (state.pointer.x * viewport.width) / 3.3;
+    const y = (state.pointer.y * viewport.height) / 3.3;
 
     setMousePosition({ x, y });
+
+    if (targetRef.current) {
+      targetRef.current.position.set(x, y, 0);
+    }
   });
+
   return null;
 };
 
@@ -30,7 +34,7 @@ const Statue = () => {
     x: 0,
     y: 0,
   });
-  const sphereRef = useRef();
+  const targetRef = useRef();
 
   return (
     <Canvas shadows>
@@ -38,6 +42,7 @@ const Statue = () => {
         enableRotate={false}
         enableZoom={false}
         enablePan={false}
+        enableDamping={false}
         minDistance={1}
         maxDistance={5}
       />
@@ -49,25 +54,19 @@ const Statue = () => {
         angle={0.4}
         attenuation={0}
         intensity={1.2}
-        distance={8}
+        distance={10}
         position={[mousePosition.x, mousePosition.y, 5]}
-        target={sphereRef.current}
+        target={targetRef.current}
         penumbra={0.8}
       />
-      <StatueObject />
-      <CircleGlitch />
       <Plane receiveShadow args={[15, 15]} position={[0, 0, -0.2]}>
         <meshStandardMaterial color="#5d5d5d" />
       </Plane>
-      <Plane
-        ref={sphereRef}
-        args={[0.001]}
-        position={[mousePosition.x, mousePosition.y, 0]}
-      >
-        <meshBasicMaterial transparent opacity={0.0} />
-      </Plane>
+      <StatueObject />
+      <CircleGlitch />
       <SoftShadows samples={1} />
-      <MouseTracker setMousePosition={setMousePosition} />
+      <MouseTracker setMousePosition={setMousePosition} targetRef={targetRef} />
+      <object3D ref={targetRef} />
     </Canvas>
   );
 };
