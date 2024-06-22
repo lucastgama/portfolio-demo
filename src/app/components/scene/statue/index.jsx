@@ -30,7 +30,7 @@ const MouseTracker = ({ targetRef, setMousePosition }) => {
 };
 
 const Statue = () => {
-  const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({
+  const [mousePosition, setMousePosition] = useState<{ x: number, y: number }>({
     x: 0,
     y: 0,
   });
