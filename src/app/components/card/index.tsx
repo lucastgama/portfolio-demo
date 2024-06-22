@@ -13,18 +13,18 @@ interface CardProps {
 const Card: React.FC<CardProps> = React.memo(
   ({ image, title, languages, description, link }) => {
     return (
-      <Link href={link} target="blank">
-        <S.Card>
-          <S.Image src={image} alt={title} />
+      <S.Card>
+        <S.Image src={image} alt={title} />
+        <Link style={{ color: "white" }} href={link} target="blank">
           <S.Title>{title}</S.Title>
-          <S.Works>
-            {languages?.map((language) => (
-              <S.WorkItem key={language}>{language}</S.WorkItem>
-            ))}
-          </S.Works>
-          <S.Description>{description}</S.Description>
-        </S.Card>
-      </Link>
+        </Link>
+        <S.Works>
+          {languages?.map((language) => (
+            <S.WorkItem key={language}>{language}</S.WorkItem>
+          ))}
+        </S.Works>
+        <S.Description>{description}</S.Description>
+      </S.Card>
     );
   }
 );

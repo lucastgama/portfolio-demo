@@ -124,15 +124,7 @@ export const ContainerPicture = styled.div`
 `;
 
 export const Picture = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
-  /* position: relative;
-  object-position: center;
-  object-fit: cover;
-  z-index: 1;
-  border-radius: 25px; */
-
-  @media screen and (max-width: 1024px) {
-    border-radius: 10px;
-  }
 `;

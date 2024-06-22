@@ -25,15 +25,14 @@ export const fontSize = {
 };
 
 export const skills = [
-  { title: "HTML + CSS", value: 95, description: "" },
   { title: "JavaScript", value: 80, description: "" },
   { title: "Node.js", value: 80, description: "" },
   { title: "React", value: 85, description: "" },
   { title: "Next.js", value: 75, description: "" },
   { title: "PHP", value: 70, description: "" },
-  { title: "WordPress", value: 80, description: "" },
-  { title: "Mysql", value: 90, description: "" },
-  { title: "Three.js", value: 65, description: "" },
+  { title: "WordPress", value: 60, description: "" },
+  { title: "Mysql", value: 80, description: "" },
+  { title: "Three.js", value: 70, description: "" },
 ];
 
 export const undefinedSkill = [

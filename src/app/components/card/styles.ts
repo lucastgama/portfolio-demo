@@ -2,6 +2,7 @@ import styled from "styled-components";
 import * as v from "@/app/lib/variable/variables";
 
 export const Card = styled.div`
+  position: relative;
   width: 240px;
   height: 345px;
   user-select: none;
@@ -21,25 +22,9 @@ export const Card = styled.div`
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   overflow: hidden;
-  transition: 0.5s all;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 60rem;
-    top: -10%;
-    left: -100%;
-    transform: rotate(-45deg);
-    box-shadow: -10px 0px 20px 1px rgba(199, 199, 199, 0.2);
-    background: rgba(211, 211, 211, 0.15);
-    transition: 1s all;
-  }
+  transition: 0.3s all;
   &:hover {
     transform: scale(1.05);
-    &:before {
-      top: -100%;
-      left: 200%;
-    }
   }
 `;
 
@@ -53,7 +38,7 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h4`
-  color: ${v.colors.thirdColor};
+  color: ${v.colors.accentColor};
   font-weight: 500;
   padding: 10px 0;
   text-transform: capitalize;
