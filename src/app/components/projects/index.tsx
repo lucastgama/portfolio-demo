@@ -2,15 +2,12 @@
 
 import * as S from "./styles";
 import Card from "../card";
-import * as v from "@/app/lib/variable/variables";
+import { projectGit } from "@/app/lib/variable/variables";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Link from "next/link";
 
 const Projects = () => {
-  const projects = v.projectGit;
-
   const settings = {
     className: "center",
     infinite: true,
@@ -45,7 +42,7 @@ const Projects = () => {
         <S.Title>Projetos</S.Title>
       </S.Container>
       <Slider {...settings}>
-        {projects.map((project, index) => (
+        {projectGit.map((project, index) => (
           <Card
             key={index}
             languages={project.languages}

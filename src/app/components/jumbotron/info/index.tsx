@@ -1,14 +1,25 @@
 "use client";
-import Statue from "../../scene/statue";
-import * as S from "./styles";
+
 import Image from "next/image";
+import Statue from "../../scene/statue/index";
+import * as S from "./styles";
+import { icons } from "@/app/lib/variable/variables";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Info = () => {
   return (
-      <S.Section className="mx-width" id="inicio">
-        <S.Statue>
-          <Statue />
-        </S.Statue>
+    <S.Section className="mx-width" id="inicio">
+      <S.Statue>
+        <Statue />
+      </S.Statue>
+      <S.SocialMedia>
+        {icons.map((icon) => (
+          <S.SocialIcon key={icon.name} href={icon.link}>
+            <FontAwesomeIcon icon={icon.icon} />
+          </S.SocialIcon>
+        ))}
+      </S.SocialMedia>
+      <S.ProfileContainer>
         <S.ProfilePicture>
           <S.PictureContainer>
             <Image
@@ -21,18 +32,10 @@ const Info = () => {
             />
           </S.PictureContainer>
         </S.ProfilePicture>
-        <S.ProfileName>Opa, eu sou o Lucas Gama</S.ProfileName>
-        <S.ProfileDescription>
-          Um desenvolvedor web apaixonado por criar experiências digitais
-          inovadoras
-        </S.ProfileDescription>
-        <S.ProfileDetails>
-          Busco elevar a jornada do usuário por meio de um design intuitivo e
-          funcional, combinando empatia no design com tecnologia de ponta.
-          Junte-se a mim nesta jornada para redefinir a maneira como sua
-          aplicação é apresentada ao mundo.
-        </S.ProfileDetails>
-      </S.Section>
+        <S.ProfileName>Lucas Gama</S.ProfileName>
+        <S.ProfileDescription>Desenvolvedor full Stack</S.ProfileDescription>
+      </S.ProfileContainer>
+    </S.Section>
   );
 };
 

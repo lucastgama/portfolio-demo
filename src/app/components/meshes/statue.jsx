@@ -6,16 +6,14 @@ export function StatueObject(props) {
   const meshRef = useRef(null);
 
   return (
-    <group
-      {...props}
-      dispose={null}
-      ref={meshRef}
-    >
+    <group {...props} dispose={null} ref={meshRef}>
       <mesh
         geometry={nodes["the-three-graces-1-r"].geometry}
         material={nodes["the-three-graces-1-r"].material}
         position={[0, 0, 0.5]}
         scale={0.06}
+        castShadow
+        receiveShadow
       />
     </group>
   );

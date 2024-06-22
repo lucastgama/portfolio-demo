@@ -32,7 +32,7 @@ export const Title = styled.h2`
     position: absolute;
     transform: matrix(-50%, -50%);
     font-size: ${v.fontSize.xs};
-    font-weight:600;
+    font-weight: 600;
     letter-spacing: 1px;
   }
   @media screen and (max-width: 1024px) {

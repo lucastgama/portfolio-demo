@@ -94,12 +94,8 @@ export const Logos = styled.div`
   align-items: center;
   justify-content: flex-start;
   padding: 0.5em 0;
-  transition: ease-in 0.5s;
   @media screen and (max-width: 1024px) {
     justify-content: center;
-  }
-  :hover{
-    transform: scale(1.2);
   }
 `;
 
@@ -127,16 +123,8 @@ export const ContainerPicture = styled.div`
   }
 `;
 
-export const Picture = styled.img`
+export const Picture = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  object-position: center;
-  object-fit: cover;
-  z-index: 1;
-  border-radius: 25px;
-
-  @media screen and (max-width: 1024px) {
-    border-radius: 10px;
-  }
 `;

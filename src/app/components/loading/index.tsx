@@ -28,9 +28,9 @@ const grow = keyframes`
 
 const Bar = styled.div`
   height: 1px;
-  width: 0; /* Start with 0 width */
+  width: 0;
   background-color: #5b5b5b;
-  animation: ${grow} 2s forwards; /* Animate to 80% width over 2 seconds */
+  animation: ${grow} 2s forwards; 
 `;
 
 const Loading = () => {

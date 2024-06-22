@@ -1,15 +1,22 @@
+import {
+  faGithub,
+  faInstagram,
+  faLinkedinIn,
+  faBloggerB
+} from "@fortawesome/free-brands-svg-icons";
+
 export const colors = {
-  primaryColor: "#0b0b0b",
+  primaryColor: "#050505",
   secondColor: "#1a1a1a",
   thirdColor: "#5b5b5b",
   accentColor: "#fdfdfdfd",
-  categoryColor:'#c2d8e9'
+  categoryColor: "#c2d8e9",
 };
 
 export const fontSize = {
   xxl: "3rem",
   xl: "2.5rem",
-  lg: "2rem", 
+  lg: "2rem",
   md: "1.6rem",
   base: "1.2rem",
   sm: "1rem",
@@ -17,79 +24,15 @@ export const fontSize = {
   xxs: "0.5rem",
 };
 
-export const logos = [
-  {
-    alt: "HTML",
-    icon: "/icons/html.png",
-  },
-  {
-    alt: "CSS",
-    icon: "/icons/css.png",
-  },
-  {
-    alt: "JavaScript",
-    icon: "/icons/js.png",
-  },
-  {
-    alt: "Node.js",
-    icon: "/icons/node.png",
-  },
-  {
-    alt: "React",
-    icon: "/icons/react.png",
-  },
-  {
-    alt: "Next",
-    icon: "/icons/nextjs.png",
-  },
-  {
-    alt: "Angular",
-    icon: "/icons/angular.png",
-  },
-  {
-    alt: "Vue",
-    icon: "/icons/vue.png",
-  },
-  {
-    alt: "PHP",
-    icon: "/icons/php.png",
-  },
-  {
-    alt: "Laravel",
-    icon: "/icons/laravel.png",
-  },
-  {
-    alt: "MySql",
-    icon: "/icons/mysql.png",
-  },
-  {
-    alt: "Wordpress",
-    icon: "/icons/wp.png",
-  },
-  {
-    alt: "Bootstrap",
-    icon: "/icons/bootstrap.png",
-  },
-  {
-    alt: "Styled Components",
-    icon: "/icons/styled-components.png",
-  },
-  {
-    alt: "Three",
-    icon: "/icons/three.png",
-  },
-];
-
 export const skills = [
-  { title: "HTML + CSS", value: 95, description: "" },
   { title: "JavaScript", value: 80, description: "" },
   { title: "Node.js", value: 80, description: "" },
   { title: "React", value: 85, description: "" },
   { title: "Next.js", value: 75, description: "" },
   { title: "PHP", value: 70, description: "" },
-  { title: "WordPress", value: 80, description: "" },
-  { title: "Mysql", value: 90, description: "" },
-  { title: "Three.js", value: 65, description: "" },
+  { title: "WordPress", value: 60, description: "" },
+  { title: "Mysql", value: 80, description: "" },
+  { title: "Three.js", value: 70, description: "" },
 ];
 
 export const undefinedSkill = [
@@ -260,3 +203,25 @@ export const projectGit = [
   },
 ];
 
+export const icons = [
+  {
+    name: "Instagram",
+    icon: faInstagram,
+    link: "https://www.instagram.com/lucas.t.gama/",
+  },
+  {
+    name: "Linkedin",
+    icon: faLinkedinIn,
+    link: "https://www.linkedin.com/in/lucas-tgama/",
+  },
+  {
+    name: "Github",
+    icon: faGithub,
+    link: "https://github.com/lucastgama",
+  },
+  {
+    name: "Blog",
+    icon: faBloggerB,
+    link: "https://github.com/lucastgama",
+  },
+];
