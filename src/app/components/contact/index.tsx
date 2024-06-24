@@ -92,13 +92,13 @@ const Contact = () => {
             maxLength={255}
             required
           />
-          <S.btnContainer>
+          <S.BtnContainer>
             {isSendingEmail ? (
               <S.Button disabled>Enviando...</S.Button>
             ) : (
               <S.Button type="submit">Enviar</S.Button>
             )}
-          </S.btnContainer>
+          </S.BtnContainer>
         </S.Form>
       </S.Container>
     </S.Section>

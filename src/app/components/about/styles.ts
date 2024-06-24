@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import * as v from "@/app/lib/variable/variables";
+import imgBackgournd from "/image/background.png";
 
 export const Section = styled.section`
   background-color: ${v.colors.primaryColor};
   display: flex;
   align-items: center;
   flex-direction: column;
+  /* background-image: url("/image/background.png"); */
 `;
 
 export const Title = styled.h2`

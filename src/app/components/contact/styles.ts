@@ -68,10 +68,10 @@ export const Form = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   z-index: 25;
   @media screen and (max-width: 1024px) {
-    gap: 15px;
+    gap: 10px;
   }
 `;
 
@@ -81,18 +81,12 @@ export const InputContainer = styled.div`
   gap: 5px;
   @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 10px;
   }
 `;
 
-export const btnContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`;
-
 export const Input = styled.input`
-  padding: 1rem;
+  padding: 0.6rem;
   background-color: ${v.colors.secondColor};
   color: ${v.colors.thirdColor};
   font-size: ${v.fontSize.base};
@@ -104,7 +98,7 @@ export const Input = styled.input`
   }
   @media screen and (max-width: 480px) {
     font-size: ${v.fontSize.xs};
-    padding: 0.8rem;
+    padding: 0.6rem;
   }
 `;
 
@@ -112,7 +106,7 @@ export const TextArea = styled.textarea`
   resize: none;
   max-height: 250px;
   max-width: 687px;
-  padding: 1rem;
+  padding: 0.6rem;
   border: none;
   border-radius: 10px;
   background-color: ${v.colors.secondColor};
@@ -124,29 +118,34 @@ export const TextArea = styled.textarea`
   }
   @media screen and (max-width: 480px) {
     font-size: ${v.fontSize.xs};
-    padding: 0.8rem;
+    padding: 0.6rem;
   }
 `;
 
+export const BtnContainer = styled.div `
+    width: 100%;
+    display: flex;
+    justify-content: end;
+`;
+
 export const Button = styled.button`
-  background-color: ${v.colors.secondColor};
-  color: ${v.colors.thirdColor};
-  border: none;
+  text-align: center;
+  width: 150px;
+  border: 1px solid ${v.colors.accentColor};
+  color: ${v.colors.accentColor};
+  background-color: ${v.colors.primaryColor};
+  border-radius: 50px;
+  padding: 0.5rem 1.4rem;
+  z-index: 2;
   cursor: pointer;
-  border-radius: 5px;
-  padding: 1rem;
-  width: 200px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  &:hover {
-    background-color: ${v.colors.thirdColor};
-    color: ${v.colors.accentColor};
-  }
+  transition: ease-out 0.3s;
   @media screen and (max-width: 1024px) {
-    font-size: ${v.fontSize.base};
+    gap: 0.2rem;
+    padding: 0.3rem 1.2rem;
   }
-  @media screen and (max-width: 480px) {
-    font-size: ${v.fontSize.xs};
-    padding: 0.8rem;
+  &:hover {
+    background-color: ${v.colors.accentColor};
+    color: ${v.colors.secondColor};
+    border: 1px solid ${v.colors.primaryColor};
   }
 `;
