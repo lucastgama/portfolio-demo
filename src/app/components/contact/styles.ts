@@ -11,7 +11,7 @@ export const Section = styled.section`
 export const Container = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 4fr 3fr;
+  grid-template-columns: 3fr 4fr;
   gap: 1.5rem;
   @media screen and (max-width: 1024px) {
     position: relative;
