@@ -14,7 +14,7 @@ const Info = () => {
       </S.Statue>
       <S.SocialMedia>
         {icons.map((icon) => (
-          <S.SocialIcon key={icon.name} href={icon.link}>
+          <S.SocialIcon key={icon.name} href={icon.link} target="_blank" >
             <FontAwesomeIcon icon={icon.icon} />
           </S.SocialIcon>
         ))}

@@ -16,6 +16,7 @@ export const Section = styled.div`
   }
   @media screen and (max-width: 480px) {
     gap: 12px;
+    height: 90svh;
   }
 `;
 
@@ -55,6 +56,13 @@ export const SocialMedia = styled.nav`
   border-top: none;
   border-right: none;
   z-index: 2;
+  @media screen and (max-width: 480px) {
+    top: 0.78rem;
+    right: 50%;
+    border-radius: 0px 0 20px 20px;
+    transform: translateX(50%);
+    border-right: 1px solid #1a1a1a;
+  }
 `;
 
 export const SocialIcon = styled.a`
@@ -64,6 +72,12 @@ export const SocialIcon = styled.a`
   transition: ease 0.2s all;
   &:hover {
     font-size: ${v.fontSize.md};
+  }
+  @media screen and (max-width: 480px) {
+    font-size: ${v.fontSize.md};
+    &:hover {
+      font-size: ${v.fontSize.lg};
+    }
   }
 `;
 
@@ -81,13 +95,9 @@ export const ProfilePicture = styled.div`
     ${v.colors.accentColor} 0%,
     ${v.colors.secondColor} 65%
   );
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 480px) {
     width: 100px;
     height: 100px;
-  }
-  @media screen and (max-width: 480px) {
-    width: 80px;
-    height: 80px;
   }
 `;
 
@@ -112,19 +122,16 @@ export const ProfileName = styled.div`
     font-size: ${v.fontSize.lg};
   }
   @media screen and (max-width: 480px) {
-    font-size: ${v.fontSize.base};
+    font-size: ${v.fontSize.md};
   }
 `;
 
 export const ProfileDescription = styled.h3`
-  font-size: ${v.fontSize.sm};
+  font-size: ${v.fontSize.base};
   color: ${v.colors.thirdColor};
   font-weight: 400;
   z-index: 2;
   @media screen and (max-width: 1024px) {
-    font-size: ${v.fontSize.xs};
-  }
-  @media screen and (max-width: 480px) {
-    font-size: ${v.fontSize.xs};
+    font-size: ${v.fontSize.sm};
   }
 `;
