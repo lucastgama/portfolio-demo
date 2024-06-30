@@ -53,7 +53,7 @@ export const Title = styled.h2`
   }
 `;
 
-export const Map = styled.div`
+export const Davi = styled.div`
   max-height: 600px;
   @media screen and (max-width: 1024px) {
     position: absolute;

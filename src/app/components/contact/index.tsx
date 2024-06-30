@@ -5,7 +5,7 @@ import * as S from "./styles";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Earth from "../scene/earth";
+import Davi from '../scene/davi'
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -58,9 +58,9 @@ const Contact = () => {
     <S.Section id="contato" className="mx-width">
       <S.Title>Contato</S.Title>
       <S.Container>
-        <S.Map>
-          <Earth />
-        </S.Map>
+        <S.Davi>
+          <Davi />
+        </S.Davi>
         <S.Form ref={form} onSubmit={sendEmail}>
           <ToastContainer />
           <S.InputContainer>
