@@ -44,7 +44,6 @@ export const undefinedSkill = [
   { title: "Undefined", value: 0, description: "" },
   { title: "Undefined", value: 0, description: "" },
   { title: "Undefined", value: 0, description: "" },
-  { title: "Undefined", value: 0, description: "" },
 ];
 
 export const upgrade = [
