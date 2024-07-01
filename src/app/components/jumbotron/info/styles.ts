@@ -10,7 +10,7 @@ export const Section = styled.div`
   text-align: center;
   height: 100vh;
   gap: 22px;
-  background-color: #000;
+  background-color: ${v.colors.primaryColor};
   @media screen and (max-width: 1024px) {
     gap: 16px;
   }
@@ -50,7 +50,7 @@ export const SocialMedia = styled.nav`
   right: 0.8rem;
   width: 210px;
   height: 42px;
-  background-color: #000;
+  background-color: ${v.colors.primaryColor};
   border-radius: 0 0 0 20px;
   border: 1px solid ${v.colors.secondColor};
   border-top: none;
@@ -61,7 +61,7 @@ export const SocialMedia = styled.nav`
     right: 50%;
     border-radius: 0px 0 20px 20px;
     transform: translateX(50%);
-    border-right: 1px solid #1a1a1a;
+    border-right: 1px solid ${v.colors.secondColor};
   }
 `;
 
