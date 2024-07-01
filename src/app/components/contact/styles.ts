@@ -105,7 +105,6 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
   resize: none;
   max-height: 250px;
-  max-width: 687px;
   padding: 0.6rem;
   border: none;
   border-radius: 10px;
