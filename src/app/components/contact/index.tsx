@@ -40,10 +40,10 @@ const Contact = () => {
     setIsSendingEmail(true);
     try {
       await emailjs.sendForm(
-        "service_fqziv1w",
-        "template_2mgrhx6",
+        "",
+        "",
         form.current,
-        "LdZvKFi60POdj_HdD"
+        ""
       );
       successSend();
       form.current.reset();
