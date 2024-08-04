@@ -35,9 +35,7 @@ export const ProfileContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1em;
-  width: 100%;
-  height: 100%;
+  width:260px;
 `;
 
 
@@ -96,10 +94,15 @@ export const PictureImage = styled.img`
 `;
 
 export const ProfileName = styled.div`
-  position: relative;
   font-size: ${v.fontSize.xl};
   color: ${v.colors.thirdColor};
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0.1em;
+  transform: translateX(2%);
+  pointer-events: "none" ;
   @media screen and (max-width: 1024px) {
     font-size: ${v.fontSize.lg};
   }
@@ -109,4 +112,43 @@ export const ProfileDescription = styled.h3`
   font-size: ${v.fontSize.base};
   color: ${v.colors.thirdColor};
   font-weight: 400;
+  pointer-events: "none" ;
+`;
+
+export const Links = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* transform: translateX(2%); */
+`;
+
+export const Link = styled.a`
+position:relative;
+cursor: pointer;
+  display: flex;
+  justify-content: center;
+    font-size: ${v.fontSize.base};
+  color: ${v.colors.thirdColor};
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: ${v.colors.accentColor};
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover {
+    color: ${v.colors.accentColor};
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 `;

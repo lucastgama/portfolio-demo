@@ -31,10 +31,17 @@ export default function Hero() {
           initial={{ y: 30, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 1 }}
-          style={{ zIndex: 2, pointerEvents: "none" }}
+          style={{ zIndex: 2}}
         >
-          <S.ProfileName>Lucas Gama</S.ProfileName>
+          <S.ProfileName>
+            <p>Lucas </p>
+            <p> Gama</p>
+          </S.ProfileName>
           <S.ProfileDescription>Desenvolvedor Web</S.ProfileDescription>
+          <S.Links>
+            <S.Link>Sobre</S.Link>
+            <S.Link>Contato</S.Link>
+          </S.Links>
         </motion.div>
       </S.ProfileContainer>
     </S.Section>
