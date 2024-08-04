@@ -46,10 +46,10 @@ const Contact = () => {
     setIsSendingEmail(true);
     try {
       await emailjs.sendForm(
-        "service_fqziv1w",
-        "template_2mgrhx6",
+        "",
+        "",
         form.current,
-        "LdZvKFi60POdj_HdD"
+        ""
       );
       successSend();
       form.current.reset();
@@ -100,7 +100,7 @@ const Contact = () => {
           />
           <S.BtnContainer>
             <ReCAPTCHA
-              sitekey="6LcD6gkqAAAAAOLdu_CJ3dcfbvRUv4Da-JOvaEQP"
+              sitekey=""
               onChange={setCaptcha}
               size={"invisible"}
               theme={"dark"}
