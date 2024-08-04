@@ -38,10 +38,6 @@ export default function Hero() {
             <p> Gama</p>
           </S.ProfileName>
           <S.ProfileDescription>Desenvolvedor Web</S.ProfileDescription>
-          <S.Links>
-            <S.Link>Sobre</S.Link>
-            <S.Link>Contato</S.Link>
-          </S.Links>
         </motion.div>
       </S.ProfileContainer>
     </S.Section>

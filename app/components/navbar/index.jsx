@@ -26,6 +26,9 @@ const Navbar = () => {
               <a>Sobre</a>
             </S.NavbarLink>
             <S.NavbarLink>
+              <a>Experiencias</a>
+            </S.NavbarLink>
+            <S.NavbarLink>
               <a>Contato</a>
             </S.NavbarLink>
           </S.NavMobileLinks>

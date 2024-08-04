@@ -200,9 +200,9 @@ export const NavMobileLinks = styled.ul`
   flex-direction: column;
   height: 90%;
   width: 50%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  transform: translateX(-18%) skew(-16deg);
+  transform: translateX(-18%) skew(-18deg);
   color: ${v.colors.accentColor};
 `;
 
