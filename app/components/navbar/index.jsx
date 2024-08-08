@@ -11,6 +11,10 @@ const Navbar = () => {
     setIsMobileNavbarOpen(!isMobileNavbarOpen);
   };
 
+  const closeMobileNavbar = () => {
+    setIsMobileNavbarOpen(false);
+  };
+
   return (
     <S.NavbarContainer>
       <S.Navbar>
@@ -22,14 +26,25 @@ const Navbar = () => {
         </S.BtnMobile>
         <S.NavMobile $isOpen={isMobileNavbarOpen}>
           <S.NavMobileLinks>
-            <S.NavbarLink>
-              <a>Sobre</a>
+            <S.NavbarLink onClick={closeMobileNavbar}>
+              <Link href="/" passHref>
+                Inicio
+              </Link>
             </S.NavbarLink>
-            <S.NavbarLink>
-              <a>Experiencias</a>
+            <S.NavbarLink onClick={closeMobileNavbar}>
+              <Link href="/sobre" passHref>
+                Sobre
+              </Link>
             </S.NavbarLink>
-            <S.NavbarLink>
-              <a>Contato</a>
+            <S.NavbarLink onClick={closeMobileNavbar}>
+              <Link href="/experiencias" passHref>
+                Experiencias
+              </Link>
+            </S.NavbarLink>
+            <S.NavbarLink onClick={closeMobileNavbar}>
+              <Link href="/contato" passHref>
+                Contato
+              </Link>
             </S.NavbarLink>
           </S.NavMobileLinks>
         </S.NavMobile>
