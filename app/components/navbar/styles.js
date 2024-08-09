@@ -12,9 +12,9 @@ export const NavbarContainer = styled.div`
 export const Navbar = styled.nav`
   position: fixed;
   top: 0.5em;
-  display: grid;
-  grid-template-columns: 7fr 1fr;
+  display: flex;
   align-items: center;
+  justify-content:flex-end;
   width: 100%;
   max-width: 1440px;
   border-radius: 50px;
@@ -164,8 +164,8 @@ export const Burger = styled.span`
 `;
 
 export const NavMobile = styled.div`
-    display: block;
-    position: fixed;
+  display: block;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -213,4 +213,28 @@ export const NavMobileBtn = styled.div`
   justify-content: center;
   gap: 12px;
   transform: skew(16deg);
+`;
+
+export const SocialMedia = styled.nav`
+  color: ${v.colors.accentColor};
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+  @media screen and (max-width: 480px) {
+    padding: 0em 1.2em;
+  }
+`;
+
+export const Icons = styled.a`
+  text-decoration: none;
+  color: ${v.colors.thirdColor};
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    color: ${v.colors.accentColor};
+  }
+  &:focus {
+    color: ${v.colors.accentColor};
+  }
 `;

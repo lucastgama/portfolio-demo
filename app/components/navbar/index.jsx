@@ -3,6 +3,8 @@
 import * as S from "./styles";
 import { useState } from "react";
 import Link from "next/link";
+import { icons } from "../../utils/constants/global";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
   const [isMobileNavbarOpen, setIsMobileNavbarOpen] = useState(false);
@@ -18,9 +20,6 @@ const Navbar = () => {
   return (
     <S.NavbarContainer>
       <S.Navbar>
-        <Link href="/" passHref>
-          <S.NavbarLogo>Lucas :</S.NavbarLogo>
-        </Link>
         <S.BtnMobile onClick={handleMobileNavbar}>
           <S.Burger $isOpen={isMobileNavbarOpen} />
         </S.BtnMobile>
@@ -37,14 +36,18 @@ const Navbar = () => {
               </Link>
             </S.NavbarLink>
             <S.NavbarLink onClick={closeMobileNavbar}>
-              <Link href="/experiencias" passHref>
-                Experiencias
-              </Link>
-            </S.NavbarLink>
-            <S.NavbarLink onClick={closeMobileNavbar}>
               <Link href="/contato" passHref>
                 Contato
               </Link>
+            </S.NavbarLink>
+            <S.NavbarLink onClick={closeMobileNavbar}>
+              <S.SocialMedia>
+                {icons.map((icon, index) => (
+                  <S.Icons key={index} href={icon.link} target="_blank">
+                    <FontAwesomeIcon icon={icon.icon} />
+                  </S.Icons>
+                ))}
+              </S.SocialMedia>
             </S.NavbarLink>
           </S.NavMobileLinks>
         </S.NavMobile>

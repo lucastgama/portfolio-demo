@@ -31,7 +31,7 @@ export default function Hero() {
           initial={{ y: 30, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 1 }}
-          style={{ zIndex: 2}}
+          style={{ zIndex: 2, pointerEvents: "none" }}
         >
           <S.ProfileName>
             <p>Lucas </p>
