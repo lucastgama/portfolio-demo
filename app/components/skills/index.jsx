@@ -33,7 +33,7 @@ const Skills = () => {
       <AnimatedDiv
         initial={{ opacity: 0, filter: "blur(5px)" }}
         animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
       >
         <S.Title>Minhas habilidades</S.Title>
       </AnimatedDiv>
@@ -41,7 +41,7 @@ const Skills = () => {
         <AnimatedDiv
           initial={{ x: -50, opacity: 0, filter: "blur(5px)" }}
           animate={isInView ? { x: 0, opacity: 1, filter: "blur(0px)" } : {}}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <S.SkillTree>
             <S.Skills>
@@ -87,7 +87,7 @@ const Skills = () => {
         <AnimatedDiv
           initial={{ x: 50, opacity: 0, filter: "blur(5px)" }}
           animate={isInView ? { x: 0, opacity: 1, filter: "blur(0px)" } : {}}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <S.ContainerModel>
             <Person />

@@ -10,12 +10,8 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 0.6rem;
-  border-radius: 0.7rem;
+  border-radius: 0.4rem;
   overflow: hidden;
-  transition: 0.3s all;
-  &:hover {
-    transform: scale(1.05);
-  }
   @media screen and (max-width: 480px) {
     height: 300px;
   }

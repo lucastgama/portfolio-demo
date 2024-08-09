@@ -15,7 +15,7 @@ const About = () => {
       <AnimatedDiv
         initial={{ opacity: 0, filter: "blur(5px)" }}
         animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
       >
         <S.Title>Sobre mim</S.Title>
       </AnimatedDiv>
@@ -23,7 +23,7 @@ const About = () => {
         <AnimatedDiv
           initial={{ x: -50, opacity: 0, filter: "blur(5px)" }}
           animate={isInView ? { x: 0, opacity: 1, filter: "blur(0px)" } : {}}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <S.ContainerPicture>
             <S.Picture src="/image/perfil.jpg" alt="Lucas Gama" />
@@ -32,7 +32,7 @@ const About = () => {
         <AnimatedDiv
           initial={{ x: 50, opacity: 0, filter: "blur(5px)" }}
           animate={isInView ? { x: 0, opacity: 1, filter: "blur(0px)" } : {}}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <S.ContainerInformation>
             <S.Description>
