@@ -17,7 +17,6 @@ export const Section = styled.div`
   }
   @media screen and (max-width: 480px) {
     gap: 12px;
-    height: 90svh;
   }
 `;
 

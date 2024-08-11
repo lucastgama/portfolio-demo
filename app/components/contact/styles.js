@@ -6,6 +6,7 @@ export const Section = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
+  /* background-image: url(''); */
 `;
 
 export const Container = styled.div`

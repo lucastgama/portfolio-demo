@@ -59,6 +59,7 @@ const Skills = () => {
                 <S.UpgradesTemplate>
                   {upgrades.map((up, index) => (
                     <Upgrade
+                      key={index}
                       title={up.title}
                       description={up.description}
                       icon={up.icon}
@@ -72,6 +73,7 @@ const Skills = () => {
                 <S.UpgradesTemplate>
                   {v.downgrade.map((down, index) => (
                     <Downgrade
+                      key={index}
                       title={down.title}
                       description={down.description}
                       icon={down.icon}
@@ -84,15 +86,10 @@ const Skills = () => {
             </S.ContainerUpgrade>
           </S.SkillTree>
         </AnimatedDiv>
-        <AnimatedDiv
-          initial={{ x: 50, opacity: 0, filter: "blur(5px)" }}
-          animate={isInView ? { x: 0, opacity: 1, filter: "blur(0px)" } : {}}
-          transition={{ duration: 0.3 }}
-        >
-          <S.ContainerModel>
-            <Person />
-          </S.ContainerModel>
-        </AnimatedDiv>
+
+        <S.ContainerModel>
+          <Person />
+        </S.ContainerModel>
       </S.Container>
     </S.Section>
   );

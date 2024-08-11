@@ -6,7 +6,6 @@ export const Section = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* background-image: url('/image/background/line.png'); */
   `;
 
 export const Title = styled.h2`
@@ -72,7 +71,8 @@ export const Skills = styled.div`
     gap: 0 1.5em;
   }
   @media screen and (max-width: 480px) {
-    gap: 0 1em;
+    gap: 0 0.8em;
+    padding: 0;
   }
 `;
 export const ContainerUpgrade = styled.div`

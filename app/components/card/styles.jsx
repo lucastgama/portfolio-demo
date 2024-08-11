@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import * as v from "../../utils/constants/global";
 
-
 export const Card = styled.div`
   width: 260px;
-  height: 345px;
   user-select: none;
   display: flex;
   flex-direction: column;
@@ -13,7 +11,8 @@ export const Card = styled.div`
   border-radius: 0.4rem;
   overflow: hidden;
   @media screen and (max-width: 480px) {
-    height: 300px;
+    align-items: center;
+    text-align: center;
   }
 `;
 
@@ -40,7 +39,10 @@ export const Works = styled.div`
   align-items: center;
   gap: 10px;
   @media screen and (max-width: 480px) {
-    display: none;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 `;
 

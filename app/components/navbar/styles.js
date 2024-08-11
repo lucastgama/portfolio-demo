@@ -17,48 +17,7 @@ export const Navbar = styled.nav`
   justify-content:flex-end;
   width: 100%;
   max-width: 1440px;
-  border-radius: 50px;
   padding: 0.3rem 3rem;
-`;
-
-export const NavbarLogo = styled.div`
-  font-size: ${v.fontSize.base};
-  color: ${v.colors.accentColor};
-  cursor: pointer;
-
-  &:after {
-    content: " : Gama";
-    color: ${v.colors.thirdColor};
-  }
-
-  @media screen and (max-width: 1024px) {
-    font-size: ${v.fontSize.sm};
-  }
-  @media screen and (max-width: 768px) {
-    font-size: ${v.fontSize.xs};
-  }
-  @media screen and (max-width: 600px) {
-    font-size: ${v.fontSize.sm};
-  }
-`;
-
-export const NavbarLinks = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: ${v.fontSize.sm};
-  gap: 24px;
-
-  @media screen and (max-width: 1024px) {
-    gap: 16px;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: ${v.fontSize.xs};
-    gap: 12px;
-  }
-  @media screen and (max-width: 600px) {
-    display: none;
-  }
 `;
 
 export const NavbarLink = styled.li`
@@ -94,23 +53,8 @@ export const NavbarLink = styled.li`
 
   @media screen and (max-width: 600px) {
     padding: 1.2rem;
-  }
-`;
+    font-size:${v.fontSize.lg};
 
-export const NavbarBtn = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  gap: 0.6rem;
-
-  @media screen and (max-width: 1024px) {
-    gap: 0.4rem;
-  }
-  @media screen and (max-width: 768px) {
-    gap: 0.2rem;
-  }
-  @media screen and (max-width: 600px) {
-    display: none;
   }
 `;
 
@@ -192,6 +136,9 @@ export const NavMobile = styled.div`
   }
 
   @media screen and (max-width: 600px) {
+    &:before {
+      right: 0;
+    }
   }
 `;
 
@@ -204,15 +151,9 @@ export const NavMobileLinks = styled.ul`
   justify-content: center;
   transform: translateX(-18%) skew(-18deg);
   color: ${v.colors.accentColor};
-`;
-
-export const NavMobileBtn = styled.div`
-  padding: 0.5em 0em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  transform: skew(16deg);
+  @media screen and (max-width: 600px) {
+    width: 45%;
+  }
 `;
 
 export const SocialMedia = styled.nav`
@@ -221,9 +162,6 @@ export const SocialMedia = styled.nav`
   align-items: flex-start;
   justify-content: center;
   gap: 15px;
-  @media screen and (max-width: 480px) {
-    padding: 0em 1.2em;
-  }
 `;
 
 export const Icons = styled.a`

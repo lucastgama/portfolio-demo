@@ -197,9 +197,9 @@ export const icons = [
     icon: faGithub,
     link: "https://github.com/lucastgama",
   },
-  {
-    name: "Blog",
-    icon: faBloggerB,
-    link: "https://eternoestagiario.com.br/",
-  },
+  // {
+  //   name: "Blog",
+  //   icon: faBloggerB,
+  //   link: "https://eternoestagiario.com.br/",
+  // },
 ];
