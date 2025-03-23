@@ -51,13 +51,13 @@ export function Statue() {
         />
         <PerspectiveCamera makeDefault position={[0, 0, 10]} />
         <Suspense fallback={null}>
-          <pointLight position={[0, -1, 1.5]} intensity={0.01} />
-          <pointLight position={[0, 1, 1.2]} intensity={0.02} />
-          <ambientLight intensity={0.01} />
+          <pointLight position={[0, -1, 1.5]} intensity={0.015} />
+          <pointLight position={[0, 1, 1.2]} intensity={0.025} />
+          <ambientLight intensity={0.02} />
           <SpotLight
             angle={0.4}
             attenuation={0}
-            intensity={1.4}
+            intensity={1.6}
             distance={10}
             position={[mousePosition.x, mousePosition.y, 5]}
             target={targetRef.current}
