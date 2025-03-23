@@ -10,26 +10,6 @@ Este é um portfolio desenvolvido utilizando Next.js, React e Three.js para cria
 - <img alt="EmailJS" src="https://img.shields.io/badge/EmailJS-2A9D8F?style=flat"> - Serviço para envio de emails pelo cliente
 - <img alt="ReCAPTCHA" src="https://img.shields.io/badge/ReCAPTCHA-4285F4?style=flat&amp;logo=google&amp;logoColor=white"> - Proteção contra bots no formulário de contato
 
-## **📂 Estrutura do Projeto**
-portfolio/
-├── app/
-│   ├── components/
-│   │   ├── about/
-│   │   ├── animated/
-│   │   ├── card/
-│   │   ├── projects/
-│   │   ├── scene/
-│   │   ├── skills/
-│   │   └── ...
-│   ├── context/
-│   ├── utils/
-│   └── ...
-├── public/
-│   ├── image/
-│   ├── models/
-│   └── ...
-└── ...
-
 ## **✨ Funcionalidades**
 - **🏠 Hero Section**: Modelo 3D interativo com animações
 - **👨‍💻 Sobre Mim**: Informações pessoais e profissionais
