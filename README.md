@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## **📝 Sobre o Projeto**
+Este é um portfolio desenvolvido utilizando Next.js, React e Three.js para criar uma experiência interativa e visualmente atraente. O projeto apresenta minhas habilidades, projetos e informações de contato com elementos 3D e animações fluidas.
 
-## Getting Started
+## **🛠️ Tecnologias Utilizadas**
+- <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=flat&amp;logo=next.js&amp;logoColor=white">(v14.2.5) - Framework React para renderização do lado do servidor
+- <img alt="React" src="https://img.shields.io/badge/React-61DAFB?style=flat&amp;logo=react&amp;logoColor=black">(v18) - Biblioteca JavaScript para construção de interfaces
+- <img alt="Three.js" src="https://img.shields.io/badge/Three.js-000000?style=flat&amp;logo=three.js&amp;logoColor=white">(v0.166.1) - Biblioteca JavaScript para criação de gráficos 3D
+- <img alt="Framer Motion" src="https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&amp;logo=framer&amp;logoColor=white">Biblioteca para animações
+- <img alt="Styled Components" src="https://img.shields.io/badge/Styled_Components-DB7093?style=flat&amp;logo=styled-components&amp;logoColor=white">CSS-in-JS para estilização
+- <img alt="EmailJS" src="https://img.shields.io/badge/EmailJS-2A9D8F?style=flat">Serviço para envio de emails pelo cliente
+- <img alt="ReCAPTCHA" src="https://img.shields.io/badge/ReCAPTCHA-4285F4?style=flat&amp;logo=google&amp;logoColor=white">Proteção contra bots no formulário de contato
 
-First, run the development server:
+## **📂 Estrutura do Projeto**
+portfolio/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+├── app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+│   ├── components/
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+│   │   ├── about/
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+│   │   ├── animated/
 
-## Learn More
+│   │   ├── card/
 
-To learn more about Next.js, take a look at the following resources:
+│   │   ├── projects/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+│   │   ├── scene/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+│   │   ├── skills/
 
-## Deploy on Vercel
+│   │   └── ...
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+│   ├── context/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+│   ├── utils/
+
+│   └── ...
+
+├── public/
+
+│   ├── image/
+
+│   ├── models/
+
+│   └── ...
+
+└── ...
+
+## **✨ Funcionalidades**
+- **🏠 Hero Section**: Modelo 3D interativo com animações
+- **👨‍💻 Sobre Mim**: Informações pessoais e profissionais
+- **🔧 Habilidades**: Sistema interativo com animações e efeitos visuais
+    - Sistema único de buff/debuff para visualização de habilidades
+- **🗂️ Projetos**: Showcase de projetos com cards animados
+- **📬 Contato**: Formulário de contato com validação e feedback visual
+- **🎬 Animações**: Transições suaves e efeitos visuais em toda a aplicação
+
+## **🚀 Como Executar**
+1. Clone o repositório
+2. Instale as dependências:
+
+npm install
+
+# ou
+
+yarn install
+
+1. Inicie o servidor de desenvolvimento:
+
+npm run dev
+
+# ou
+
+yarn dev
+
+1. Abra http://localhost:3000 no seu navegador
+
+## **📋 Scripts Disponíveis**
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Cria a versão de produção
+- `npm run export` - Gera arquivos estáticos para hospedagem
+- `npm run start` - Inicia o servidor em modo de produção
+- `npm run lint` - Executa a verificação de código com ESLint
+
+## **💡 Recursos Interativos**
+O portfolio inclui elementos interativos como:
+
+- 🎮 Personagem 3D manipulável
+- 📊 Sistema de habilidades com upgrades e downgrades
+- 📜 Animações baseadas em scroll
+- ✨ Efeitos visuais responsivos
+
+## **📱 Responsividade**
+O projeto é totalmente responsivo, adaptando-se a diferentes tamanhos de tela:
+
+- Desktop
+- Tablet
+- Mobile
