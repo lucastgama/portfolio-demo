@@ -163,12 +163,12 @@ export const projectGit = [
     link: "https://github.com/lucastgama/portfolio",
   },
   {
-    title: "Candy Crush",
+    title: "Sistema de Gerenciamento de Projetos",
     description:
       "Uma forma de melhorar meu conhecimento em React com um jogo que eu gosto",
-    languages: ["React"],
-    image: "./image/projetos/candy.png",
-    link: "https://github.com/lucastgama/candy-crush",
+    languages: ["Next.js", "React", "Node.js", "Mysql"],
+    image: "./image/projetos/management.png",
+    link: "https://github.com/lucastgama/Project-Management",
   },
   {
     title: "React 3D",
