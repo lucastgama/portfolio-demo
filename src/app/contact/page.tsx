@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Davi from "../components/scene/davi";
 import ReCAPTCHA from "react-google-recaptcha";
 import { colors } from "../lib/global";
+import { config } from "../lib/config";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -59,10 +60,10 @@ const Contact = () => {
     setIsSendingEmail(true);
     try {
       await emailjs.sendForm(
-        "",
-        "",
+        config.emailjs.serviceId,
+        config.emailjs.templateId,
         form.current,
-        ""
+        config.emailjs.publicKey
       );
       successSend();
       form.current.reset();
@@ -166,13 +167,13 @@ const Contact = () => {
           />
 
           <div className="w-full flex flex-col items-end justify-end gap-2.5">
-            <ReCAPTCHA
-              sitekey=""
-              onChange={setCaptcha}
-              size="invisible"
-              theme="dark"
-              badge="inline"
-            />
+            <div className="w-full flex justify-end">
+              <ReCAPTCHA
+                sitekey={config.recaptcha.siteKey}
+                onChange={setCaptcha}
+                theme="dark"
+              />
+            </div>
             <button
               type="submit"
               disabled={isSendingEmail}
