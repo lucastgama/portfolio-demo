@@ -7,7 +7,7 @@ const About = () => {
   const profileRef = useRef(null);
 
   const handleDownload = async () => {
-    const PDF_URL = "./doc/cv_lucas_gama.pdf";
+    const PDF_URL = "./file/cv_lucas_gama.pdf";
     try {
       const response = await fetch(PDF_URL);
       const blob = await response.blob();
