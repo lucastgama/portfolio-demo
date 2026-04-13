@@ -159,7 +159,7 @@ export const projectGit = [
     title: "React Native Habit Tracker",
     description:
       "Aplicativo mobile para acompanhar hábitos diários com interface simples e funcional. Baseado em tutorial e ainda em desenvolvimento.",
-    languages: ["React Native", "JavaScript"],
+    languages: ["React Native"],
     image: "./image/projetos/rn-habit-tracker.jpg",
     link: "https://github.com/lucastgama/react-native-habit-tracker",
   },
@@ -177,11 +177,7 @@ export const projectGit = [
     title: "Locafy Platform",
     description:
       "Plataforma web completa inspirada em um tutorial empresarial, com Next.js, Node e infraestrutura AWS (Cognito, RDS, S3).",
-    languages: [
-      "Next.js",
-      "Node.js",
-      "AWS",
-    ],
+    languages: ["Next.js", "Node.js", "AWS"],
     image: "./image/projetos/next-locafy-platform.jpg",
     link: "https://github.com/lucastgama/locafy-platform",
   },
@@ -199,9 +195,18 @@ export const projectGit = [
     title: "Portfolio Demo",
     description:
       "Protótipo do meu portfolio pessoal para demonstrar minhas habilidades em React e desenvolvimento web responsivo.",
-    languages: ["React", "JavaScript", "CSS"],
+    languages: ["React", "Three.js"],
     image: "./image/projetos/next-portfolio.png",
     link: "https://github.com/lucastgama/portfolio-demo",
+  },
+  {
+    id: 6,
+    title: "TikTok Clone (Expo + Clerk + Supabase + AWS)",
+    description:
+      "Clone do TikTok em React Native com Expo, autenticação via Clerk, dados no Supabase e upload de vídeos/thumbnails no AWS S3. Arquitetura organizada por rotas públicas e protegidas.",
+    languages: ["React Native", "Expo", "TypeScript","AWS"],
+    image: "./image/projetos/rn-tiktok-clone.jpg",
+    link: "https://github.com/lucastgama/tiktok-clone",
   },
 ];
 

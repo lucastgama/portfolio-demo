@@ -23,14 +23,14 @@ const About = () => {
 
   return (
     <section
-      className="flex items-center flex-col py-12 px-4"
+      className="flex items-center flex-col py-12 px-4 min-h-screen"
       style={{
         background: `linear-gradient(to bottom right, ${colors.primaryColor}, ${colors.secondColor}, ${colors.primaryColor})`,
       }}
       ref={profileRef}
     >
       <h2
-        className="relative w-full flex items-center justify-center uppercase mb-4 lg:mb-4 font-bold text-center"
+        className="relative w-full max-w-7xl mx-auto flex items-center justify-center uppercase mb-4 lg:mb-4 font-bold text-center"
         style={{
           fontSize: "clamp(1.4rem, 4vw, 1.8rem)",
           color: colors.accentColor,
@@ -39,7 +39,7 @@ const About = () => {
         Sobre mim
       </h2>
 
-      <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-5 items-center justify-center">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-5 items-center justify-center">
         <div className="flex justify-center lg:justify-start">
           <div
             className="relative rounded-3xl lg:rounded-[24px] p-3 lg:p-4 w-44 h-44 lg:w-[400px] lg:h-[450px]"

@@ -63,7 +63,7 @@ const Contact = () => {
         config.emailjs.serviceId,
         config.emailjs.templateId,
         form.current,
-        config.emailjs.publicKey
+        config.emailjs.publicKey,
       );
       successSend();
       form.current.reset();
@@ -79,13 +79,13 @@ const Contact = () => {
     <section
       id="contato"
       ref={sectionRef}
-      className="flex items-center flex-col py-12 px-4"
+      className="flex items-center flex-col py-12 px-4 min-h-screen"
       style={{
         background: `linear-gradient(to bottom right, ${colors.primaryColor}, ${colors.secondColor}, ${colors.primaryColor})`,
       }}
     >
       <h2
-        className="relative w-full flex items-center justify-center uppercase mb-4 font-bold text-center"
+        className="relative w-full max-w-7xl mx-auto flex items-center justify-center uppercase mb-4 font-bold text-center"
         style={{
           fontSize: "clamp(1.4rem, 4vw, 1.8rem)",
           color: colors.accentColor,
@@ -94,7 +94,7 @@ const Contact = () => {
         Contato
       </h2>
 
-      <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-[3fr_4fr] gap-6">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[3fr_4fr] gap-6">
         <div className="max-h-[600px] h-[300px] sm:h-[400px] lg:h-[600px] rounded-2xl overflow-hidden">
           <Davi />
         </div>
